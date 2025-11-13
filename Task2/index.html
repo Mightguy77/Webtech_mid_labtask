@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="grid grid-2">
+            <div class="field">
+                <label for="first-name">First name *</label><br>
+                <input type="text" id="first-name" name="firstName" maxlength="50" required placeholder="Given name" />
+            </div>
+            <div class="field">
+                <label for="last-name">Last name *</label><br>
+                <input type="text" id="last-name" name="lastName" maxlength="50" required placeholder="Family name" />
+            </div>
+        </div>
+
+      
+
+        <label for="dob">Date of birth *</label>
+        <input type="date" id="dob" name="dateOfBirth" required /><br>
+
+        <label>Gender *</label>
+        <div class="radio-group" role="radiogroup" aria-labelledby="gender-label">
+            <input type="radio" id="gender-m" name="gender" value="male" required />
+            <label for="gender-m">Male</label>
+
+            <input type="radio" id="gender-f" name="gender" value="female" />
+            <label for="gender-f">Female</label>
+
+            <input type="radio" id="gender-o" name="gender" value="other" />
+            <label for="gender-o">Other</label>
+        </div><br>
+
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" maxlength="100" required placeholder="name@gmail.com" /><br>
+
+        <label for="phone">Phone number *</label>
+        <input type="tel" id="phone" name="phone" maxlength="20" required placeholder="+880 555 555 5555"/><br>
+
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address" rows="3" maxlength="250"placeholder="Country, city..."></textarea>
+
+       
+        
+    </fieldset>
+
+
+
+    <fieldset>
+        <legend>Academic Information</legend>
+
+        <label for="highest-degree">Highest completed qualification *</label>
+        <select id="highest-degree" name="highestDegree" required>
+          <option value="">-- Select qualification --</option>
+          <option value="ssc">Secondary School Certificate</option>
+          <option value="hsc">Higher Secondary Certificate</option>
+          <option value="bachelor">Bachelor's Degree</option>
+          <option value="other">Other</option>
+        </select> <br>
+
+        <label for="institution">Institution name *</label>
+        <input type="text" id="institution" name="institution" maxlength="100" required placeholder="Name of school / college / university" /><br>
+
+        <div class="grid grid-2">
+            <div class="field">
+                 <label for="graduation-year">Year of graduation *</label><br>
+        <input type="number" id="graduation-year" name="graduationYear" min="1900" max="2100" required placeholder="e.g., 2024" /><br>
+            </div>
+            <div class="field">
+                <label for="gpa">Grade / GPA (if applicable)</label><br>
+        <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="10" placeholder="e.g., 3.75" /><br>
+            </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Program Preferences & Interests</legend>
+
+        <label for="course">Course / Program applying for *</label>
+        <select id="course" name="course" required>
+          <option value="">-- Select a program --</option>
+          <option value="cs">B.Sc. Computer Science</option>
+          <option value="it">B.Sc. Information Technology</option>
+          <option value="eng">B.Eng. Software Engineering</option>
+          <option value="bus">BBA</option>
+          <option value="other">Other</option>
+        </select><br>
+
+        <label for="department">Preferred Department</label>
+        <select id="department" name="department">
+          <option value="">-- Optional --</option>
+          <option value="computing">Computing & IT</option>
+          <option value="engineering">Engineering</option>
+          <option value="business">Business</option>
+          <option value="sciences">Sciences</option>
+        </select><br>
+
+       
+          <strong>Interests (select all that apply)</strong><br>
+          <input type="checkbox" id="interest-research" name="interests" value="research" />
+          <label for="interest-research">Research</label>
+
+          <input type="checkbox" id="interest-sports" name="interests" value="sports" />
+          <label for="interest-sports">Sports & Clubs</label>
+
+          <input type="checkbox" id="interest-volunteer" name="interests" value="volunteer" />
+          <label for="interest-volunteer">Volunteer Work</label>
+
+          <input type="checkbox" id="interest-arts" name="interests" value="arts" />
+          <label for="interest-arts">Arts & Culture</label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Supporting Documents</legend>
+
+        <label for="transcript">Official transcript (PDF) *</label>
+        <input type="file" id="transcript" name="transcript" accept=".pdf,application/pdf" required /><br>
+
+        <label for="resume">Resume / CV (PDF, DOCX)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,application/pdf,.doc,.docx" /><br>
+
+        <label for="photo">Passport photo (JPEG/PNG)</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+       
+      </fieldset>
+
+      <fieldset style="margin-bottom: 10px;">
+        <legend>Declaration</legend>
+        <input type="checkbox" id="declaration" name="declaration" required />
+        <label for="declaration">I certify that the information provided is true and correct to the best of my knowledge. *</label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" id="submit">Submit Application</button>
+        <button type="reset" class="secondary">Reset Form</button>
+      </div>
+
+
+
+
+
+</body>
+
+</html>
