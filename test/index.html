@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page with Floating Contact Widget</title>
+  <style>
+    /* Page demo content so you can scroll and see the widget stay visible */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.5;
+      color: #222;
+    }
+    .content {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 0 20px 2000px; /* extra bottom padding to allow long scroll for demo */
+    }
+    h1 { margin-top: 0; }
+
+    /* Floating contact widget (fixed to bottom-right) */
+    .contact-widget {
+      position: fixed;           /* stays visible when scrolling */
+      right: 20px;               /* distance from right edge */
+      bottom: 20px;              /* distance from bottom edge */
+      z-index: 10000;            /* keep above other content */
+      width: 240px;
+      box-sizing: border-box;
+      padding: 12px 14px;        /* internal padding */
+      background: #0066cc;       /* background color to stand out */
+      color: #ffffff;
+      border: 2px solid rgba(255,255,255,0.18); /* subtle border */
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(3,30,70,0.25);
+      text-align: left;
+      transition: background-color 160ms ease, transform 160ms ease;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .contact-widget__title {
+      font-weight: 700;
+      font-size: 15px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-widget__meta {
+      font-weight: 500;
+      font-size: 13px;
+      margin: 0;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .contact-widget a {
+      color: #ffffff;            /* ensure links are visible */
+      text-decoration: underline;/* readable link style */
+      font-weight: 600;
+    }
+
+    /* Hover effect: change background color and lift slightly */
+    .contact-widget:hover {
+      background-color: #0056a8;
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+
+    /* Make the widget slightly smaller on narrow screens and not cover too much of the page */
+    @media (max-width: 420px) {
+      .contact-widget {
+        right: 12px;
+        bottom: 12px;
+        width: 200px;
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Demo Page</h1>
+    <p>This page includes a floating contact widget pinned to the bottom-right corner. Scroll to see it stay visible above content.</p>
+    <p>...</p>
+    <!-- More demo content so the page is scrollable -->
+  </div>
+
+  <!-- Floating Contact Widget -->
+  <aside class="contact-widget" role="complementary" aria-label="Contact support">
+    <div class="contact-widget__title">Contact Us</div>
+    <div class="contact-widget__meta">
+      <a href="tel:+18001234567" aria-label="Call support">📞 +1 (800) 123-4567</a>
+    </div>
+    <div class="contact-widget__meta">
+      <a href="mailto:support@example.com" aria-label="Email support">✉️ support@example.com</a>
+    </div>
+  </aside>
+</body>
+</html>

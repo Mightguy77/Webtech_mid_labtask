@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Product Display</title>
+
+    <style>
+        .product img {
+            width: 140px;
+            height: 100px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 12px auto;
+        }
+
+        h3 {
+            margin: 6px 0;
+            font-size: 1.05rem;
+            color: #0f2a44;
+        }
+
+        .product {
+
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            background: linear-gradient(180deg, #ffffff 0%, var(--muted) 100%);
+            border: 2px solid #d9e4f2;
+            padding: 18px;
+            margin: 40px;
+            text-align: center;
+            border-radius: 8px;
+            transition: 0.3s;
+            
+            
+
+
+        }
+
+        .product:hover {
+            outline: 3px solid rgba(79, 151, 249, 0.25);
+            outline-offset: 6px;
+            transform: translateY(-3px);
+            
+        }
+
+
+
+        .btn:hover {
+            background: #3a7be0;
+            transform: translateY(-2px);
+        }
+
+
+
+
+    
+
+
+
+        .btn {
+            text-decoration: none;
+            background-color: rgb(169, 155, 228);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+    <!-- Laptop -->
+    <div class="product">
+        <img src="laptop.png" alt="Laptop image">
+        <h3>Asus laptop</h3>
+        <p>Lightweight 14" laptop with long battery life and crisp display—great for work on the go.</p>
+        <p style="color:0b3d91">$1,199.00</p>
+        <a class="btn" href="#">Buy Now</a>
+    </div>
+
+    <!-- Headphones -->
+    <div class="product">
+        <img src="headphone.png" alt="Headphones image">
+        <h3>Headphones</h3>
+        <p>Comfortable over-ear cans with balanced sound and active noise cancellation.</p>
+        <p style="color:0b3d91">$199.00</p>
+        <a class="btn" href="#">Buy Now</a>
+    </div>
+
+    <!-- Smartwatch -->
+    <div class="product">
+        <img src="watch.jpg" alt="Smartwatch image">
+        <h3>Smart Watch</h3>
+        <p>Compact smartwatch with fitness tracking, notifications, and customizable faces.</p>
+        <p style="color:0b3d91">$149.00</p>
+        <a class="btn" href="#">Buy Now</a>
+    </div>
+
+</body>
+
+</html>

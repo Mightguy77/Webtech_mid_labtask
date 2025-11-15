@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Floating Contact Widget</title>
+
+    <style>
+        .contact {
+
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000; 
+            background-color:aqua;
+            padding: 15px;
+            border: 2px solid grey;
+            border-radius: 8px;
+            width: 200px;
+            height:90px;
+            
+           
+        }
+        
+
+        
+        .contact:hover {
+
+            outline: 3px solid rgba(79, 151, 249, 0.25);
+            outline-offset: 6px;
+            transform: translateY(-3px);
+        }
+
+
+
+        .contact a {
+            
+            text-decoration: none;
+            color: blue;
+        }
+
+        p{
+            margin:0px;
+        }
+        #email{
+            color:blue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p style="height:2000px;">
+        Scroll to see it stay visible above content.
+    </p>
+
+    <div class="contact">
+        <p style="font-size: 17px;"><strong>Contact Us:</strong></p><br>
+        <p><strong>Phone: </strong>+880 12345-67788</p>
+        <p ><strong>Email: </strong ><span id="email" >support@example.com</span></p>
+
+    </div>
+
+</body>
+</html>
