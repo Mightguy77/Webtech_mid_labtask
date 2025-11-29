@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Text Analysis</title>
+     <script src="script.js" defer></script>
+    <style>
+        textarea {
+            width: 100%;  
+            border: 1px solid #d7dbe0;
+            border-radius: 8px;
+            font-size:15px;       
+        }
+        #results{
+          border: 1px solid #d7dbe0;
+          border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>Text Analysis</h3>
+  <textarea id="text" placeholder="Paste text here" rows="10" cols="60"></textarea>
+  <br>
+  <button id="analyze">Analyze Text</button>
+
+  <div id="results" style="display:none">
+    <p>Characters: <span id="chars">0</span></p>
+    <p>Words: <span id="words">0</span></p>
+    <p>Reversed:</p>
+    <pre id="reversed"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
