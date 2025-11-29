@@ -1,0 +1,37 @@
+
+header {
+    position:sticky;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(147, 192, 232);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
+}
+
+nav {
+
+    display: flex;
+    text-align: center;
+    background-color: rgb(147, 192, 232);
+    justify-content: space-between;
+}
+
+
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding:5px;
+    border-radius: 10px;
+}
+
+
+
+a:hover {
+    background-color: aquamarine;
+    
+}
