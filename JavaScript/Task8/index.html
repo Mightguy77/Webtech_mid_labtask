@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic display</title>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <h3>Register</h3>
+        <label for="option">Select your status</label>
+        <select  id="userType">
+            <option value="">--select--</option>
+            <option value="student">Stuent</option>
+            <option value="teacher">Teacher</option>
+        </select>
+
+        <div id="rollField" style="display: none; margin-top: 20px;">
+            <label for="roll">Roll Number:</label>
+            <input type="text" id="roll">
+        </div>
+
+        <div id="deptField" style="display: none ; margin-top: 20px;">
+            <label for="dept">Department: </label>
+            <input type="text" id="dept">
+        </div>
+    </body>
+</html>

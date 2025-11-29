@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <h1 id="title">Your Name</h1>
+      <div class="greeting">
+        <span id="greetingText">Hello</span>
+        <span id="liveClock" aria-live="polite">--:--:--</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <nav class="nav">
+        <button class="nav-btn" data-section="about">About</button>
+        <button class="nav-btn" data-section="projects">Projects</button>
+        <button class="nav-btn" data-section="contact">Contact</button>
+      </nav>
+
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" />
+        <span id="themeLabel">Dark</span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section active">
+      <h2>About</h2>
+      <p id="aboutText">
+        Hi — I'm a motivated developer intern candidate who enjoys building small, useful apps.
+        This paragraph is editable by JavaScript (demonstration of dynamic content).
+      </p>
+    </section>
+
+    <section id="projects" class="section" aria-hidden="true">
+      <h2>Projects</h2>
+      <div id="projectsList" class="projects-list">
+        <!-- Projects rendered by JS -->
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-hidden="true">
+      <h2>Contact</h2>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" />
+          <div class="error" id="errorName" aria-live="polite"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
+          <div class="error" id="errorEmail" aria-live="polite"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+          <div class="error" id="errorMessage" aria-live="polite"></div>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" id="submitBtn">Send Message</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+
+        <div id="formStatus" class="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

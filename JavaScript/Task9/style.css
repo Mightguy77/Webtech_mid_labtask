@@ -1,0 +1,153 @@
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #555;
+  --accent: #2563eb;
+  --card: #f7f9fc;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  padding:20px;
+  min-height:100vh;
+  box-sizing:border-box;
+}
+
+body.dark{
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #9fb4d6;
+  --accent: #60a5fa;
+  --card: #07101a;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.brand h1{
+  margin:0;
+  font-size:1.2rem;
+}
+
+.greeting{
+  font-size:0.95rem;
+  color:var(--muted);
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-top:6px;
+}
+
+#liveClock{
+  font-weight:600;
+  color:var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+}
+
+.controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.nav-btn{
+  background:transparent;
+  border:1px solid transparent;
+  padding:8px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  color:var(--text);
+}
+.nav-btn:hover{ background:var(--card); }
+
+.theme-toggle{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+main{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.section{
+  display:none;
+  padding:12px;
+  border-radius:8px;
+  background:var(--card);
+}
+
+.section.active{
+  display:block;
+}
+
+.projects-list{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.project{
+  border-radius:8px;
+  padding:12px;
+  min-width:220px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+.form-row{
+  margin-bottom:10px;
+  display:flex;
+  flex-direction:column;
+}
+
+label{ font-size:0.9rem; margin-bottom:6px; color:var(--muted); }
+input, textarea{
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:0.95rem;
+  background:transparent;
+  color:var(--text);
+}
+button[type="submit"]{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+button[type="button"]{
+  background:transparent;
+  border:1px solid #ccc;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+  margin-left:8px;
+}
+
+.error{
+  color:#ff6b6b;
+  font-size:0.85rem;
+  min-height:1em;
+  margin-top:6px;
+}
+
+.status{
+  margin-top:8px;
+  font-size:0.95rem;
+  color:var(--muted);
+}

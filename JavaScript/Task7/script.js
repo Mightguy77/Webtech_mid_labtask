@@ -1,4 +1,4 @@
-const bgBtn=document.getElementById("bgBtn")
+const bgBtn=document.getElementById("bgBtn") 
 const fsBtn=document.getElementById("fsBtn")
 const cntBtn=document.getElementById("cntBtn")
 const resetBtn=document.getElementById("reset")

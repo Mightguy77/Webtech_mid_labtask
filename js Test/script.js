@@ -1,45 +1,24 @@
-const sample = document.getElementById('sample');
-const bgBtn = document.getElementById('bgBtn');
-const incBtn = document.getElementById('incBtn');
-const centerBtn = document.getElementById('centerBtn');
-const resetBtn = document.getElementById('resetBtn');
+const userType = document.getElementById('userType');
+const rollField = document.getElementById('rollField');
+const deptField = document.getElementById('deptField');
 
-// capture the initial computed font size so we can step from it and reset later
-const computed = window.getComputedStyle(sample);
-let initialFontSize = parseFloat(computed.fontSize) || 16; // in px
-let currentFontSize = initialFontSize;
-
-// background color choices (cycles through them each click)
-const colors = ['#fff59d', '#c8e6c9', '#bbdefb', '#ffcdd2', '#e1bee7'];
-let colorIndex = -1;
-
-function changeBackgroundColor() {
-  colorIndex = (colorIndex + 1) % colors.length;
-  sample.style.backgroundColor = colors[colorIndex];
+function updateForm() {
+  const val = userType.value;
+  if (val === 'student') {
+    rollField.style.display = 'block';
+    deptField.style.display = 'none';
+  } else if (val === 'teacher') {
+    rollField.style.display = 'none';
+    deptField.style.display = 'block';
+  } else {
+    // none selected
+    rollField.style.display = 'none';
+    deptField.style.display = 'none';
+  }
 }
 
-function increaseFontSize() {
-  currentFontSize = (currentFontSize || initialFontSize) + 2;
-  sample.style.fontSize = currentFontSize + 'px';
-}
+// set initial visibility on load
+document.addEventListener('DOMContentLoaded', updateForm);
 
-function centerText() {
-  sample.style.textAlign = 'center';
-}
-
-function resetStyle() {
-  // remove inline styles to revert to defaults
-  sample.style.backgroundColor = '';
-  sample.style.fontSize = '';
-  sample.style.textAlign = '';
-
-  // reset tracking variables
-  currentFontSize = initialFontSize;
-  colorIndex = -1;
-}
-
-// wire up buttons
-bgBtn.addEventListener('click', changeBackgroundColor);
-incBtn.addEventListener('click', increaseFontSize);
-centerBtn.addEventListener('click', centerText);
-resetBtn.addEventListener('click', resetStyle);
+// update when selection changes
+userType.addEventListener('change', updateForm);

@@ -1,18 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Dynamic Style Control Panel</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Registration Form</title>
 </head>
 <body>
-  <p id="sample">
-    This is a sample paragraph. Use the controls to change its style.
-  </p>
+  <h3>Register</h3>
 
-  <button type="button" id="bgBtn">Change Background Color</button>
-  <button type="button" id="incBtn">Increase Font Size</button>
-  <button type="button" id="centerBtn">Center Text</button>
-  <button type="button" id="resetBtn">Reset Style</button>
+  <label for="userType">I am a:</label>
+  <select id="userType">
+    <option value="">-- Select --</option>
+    <option value="student">Student</option>
+    <option value="teacher">Teacher</option>
+  </select>
+
+  <div id="rollField" style="display:none; margin-top:8px;">
+    <label for="roll">Roll Number:</label>
+    <input id="roll" type="text" />
+  </div>
+
+  <div id="deptField" style="display:none; margin-top:8px;">
+    <label for="dept">Department:</label>
+    <input id="dept" type="text" />
+  </div>
 
   <script src="script.js"></script>
 </body>
