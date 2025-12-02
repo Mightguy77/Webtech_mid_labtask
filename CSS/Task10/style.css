@@ -1,0 +1,30 @@
+.box {
+      position: absolute;
+      width: 150px;
+      height: 100px;
+      color: black;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Change these z-index values to see layering change */
+    #box1 {
+      background: cadetblue;
+      top: 30px;
+      left: 30px;
+      z-index: 1;
+    }
+
+    #box2 {
+      background-color: aqua;
+      top: 60px;
+      left: 60px;
+      z-index: 2;
+    }
+
+    #box3 {
+      background-color: bisque;
+      top: 90px;
+      left: 90px;
+      z-index: 3;
+    }

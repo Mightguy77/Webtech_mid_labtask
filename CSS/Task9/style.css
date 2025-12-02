@@ -1,0 +1,33 @@
+ body {
+      margin: 0;
+    }
+
+    .layout {
+      font-size: 0; 
+    }
+
+    .box {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 16px;  
+      padding: 10px;
+    
+      border: 1px solid #333;
+      box-sizing: border-box;
+      
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #f0f0f0;
+    }
+
+    .main {
+      width: 60%;
+      background-color: #e0f7fa;
+    }
+
+    .ads {
+      width: 20%;
+      background-color: #ffe0b2;
+    }
