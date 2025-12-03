@@ -1,83 +1,144 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Personal Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Interactive Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            color: black;
+        }
+
+        #header {
+         
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 10px 20px;
+        }
+
+        section {
+            display: none;
+        }
+
+        
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .error {
+            font-size: 13px;
+            color: red;
+            height: 16px;
+        }
+
+        .success {
+            font-size: 14px;
+            color: green;
+            margin-top: 8px;
+            height: 18px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 3px;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin-top: 8px;
+            display: block;
+        }
+
+  
+    </style>
 </head>
-<body>
-  <header class="header">
-    <div class="brand">
-      <h1 id="title">Your Name</h1>
-      <div class="greeting">
-        <span id="greetingText">Hello</span>
-        <span id="liveClock" aria-live="polite">--:--:--</span>
-      </div>
-    </div>
-
-    <div class="controls">
-      <nav class="nav">
-        <button class="nav-btn" data-section="about">About</button>
-        <button class="nav-btn" data-section="projects">Projects</button>
-        <button class="nav-btn" data-section="contact">Contact</button>
-      </nav>
-
-      <label class="theme-toggle">
-        <input type="checkbox" id="themeSwitch" />
-        <span id="themeLabel">Dark</span>
-      </label>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="section active">
-      <h2>About</h2>
-      <p id="aboutText">
-        Hi — I'm a motivated developer intern candidate who enjoys building small, useful apps.
-        This paragraph is editable by JavaScript (demonstration of dynamic content).
-      </p>
-    </section>
-
-    <section id="projects" class="section" aria-hidden="true">
-      <h2>Projects</h2>
-      <div id="projectsList" class="projects-list">
-        <!-- Projects rendered by JS -->
-      </div>
-    </section>
-
-    <section id="contact" class="section" aria-hidden="true">
-      <h2>Contact</h2>
-
-      <form id="contactForm" novalidate>
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" />
-          <div class="error" id="errorName" aria-live="polite"></div>
+<body onload="initPage()">
+    <header id="header">
+        <div>
+            <strong>Student Portfolio</strong><br>
+            <span id="greeting">Welcome</span>
         </div>
+        <nav>
+            <a onclick="showSection('about')">About</a>
+            <a onclick="showSection('projects')">Projects</a>
+            <a onclick="showSection('contact')">Contact</a>
+        </nav>
+        <button id="themeBtn" onclick="toggleTheme()">darkMode</button>
+    </header>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" />
-          <div class="error" id="errorEmail" aria-live="polite"></div>
-        </div>
+    <main>
+ 
+        <section id="about" style="display: block;">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>I am a computer science student interested in web development and software engineering.</p>
+            </div>
+        </section>
 
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5"></textarea>
-          <div class="error" id="errorMessage" aria-live="polite"></div>
-        </div>
 
-        <div class="form-row">
-          <button type="submit" id="submitBtn">Send Message</button>
-          <button type="button" id="resetBtn">Reset</button>
-        </div>
+        <section id="projects">
+            <div class="card">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Simple Portfolio Website</li>
+                    <li>Todo List App</li>
+                    <li>Basic Calculator</li>
+                </ul>
+            </div>
+        </section>
 
-        <div id="formStatus" class="status" aria-live="polite"></div>
-      </form>
-    </section>
-  </main>
+       
+        <section id="contact">
+            <div class="card">
+                <h2>Contact Me</h2>
+                <form onsubmit="event.preventDefault(); validateForm();">
+                    <label for="nameTF">Name:</label>
+                    <input type="text" id="nameTF">
+                    <div id="nameERR" class="error"></div>
 
-  <script src="script.js"></script>
+                    <label for="emailTF">Email:</label>
+                    <input type="text" id="emailTF">
+                    <div id="emailERR" class="error"></div>
+
+                    <label for="msgTF">Message:</label>
+                    <textarea id="msgTF" rows="4"></textarea>
+                    <div id="msgERR" class="error"></div>
+
+                    <button type="submit">Send</button>
+                    <div id="successMSG" class="success"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+   
 </body>
 </html>
